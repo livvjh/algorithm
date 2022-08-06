@@ -1,9 +1,8 @@
 # 6017
 # str = input()
-# new_str = str
+# new_str = ""
 # for i in range(3):
-#     if i != 2:
-#         new_str += " " + str
+#     new_str += " " + str
 #
 # print(new_str)
 
@@ -143,17 +142,17 @@
 # 1. 일단 바둑판 다 0으로 초기화
 # 2. 선택된 애들을 입력받기 [[n, m], [n, m], [n, m], [n, m], [n, m]]
 
-n = int(input())
-arr = [[0] * 19 for _ in range(19)]
-
-for _ in range(n):
-    checked_arr = input().split()
-    arr[int(checked_arr[0])-1][int(checked_arr[1])-1] = 1
-
-for i in range(len(arr)):
-    for j in arr[i]:
-        print(j, end=" ")
-    print()
+# n = int(input())
+# arr = [[0] * 19 for _ in range(19)]
+#
+# for _ in range(n):
+#     checked_arr = input().split()
+#     arr[int(checked_arr[0])-1][int(checked_arr[1])-1] = 1
+#
+# for i in range(len(arr)):
+#     for j in arr[i]:
+#         print(j, end=" ")
+#     print()
 
 
 # 6096
