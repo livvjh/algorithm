@@ -1,8 +1,6 @@
 from typing import List
 
 
-# 순서를 나열해서 주어진 k값까지만 배열로 리턴 (순서가 같으면 그냥 처음 주어진 배열 순으로 리턴)
-
 class Solution:
     @staticmethod
     def weakest_rows(mat: List[List[int]], k: int) -> List[int]:
