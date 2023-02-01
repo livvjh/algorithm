@@ -1,7 +1,7 @@
 from typing import List
 
 
-# 1회 풀이
+# 1회 풀이 (brute force)
 class Solution:
     @staticmethod
     def two_sum(nums: List[int], target: int) -> List[int]:
@@ -20,7 +20,7 @@ class Solution:
                         return result
 
 
-# 2회 풀이
+# 2회 풀이 (dict map)
 class Solution2:
     @staticmethod
     def two_sum(nums: List[int], target: int) -> List[int]:
