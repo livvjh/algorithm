@@ -21,12 +21,24 @@ class Solution:
             prefix += char
         return prefix
 
+    @staticmethod
+    def longest_common_prefix_horizontal(strs: List[str]) -> str:
+        prefix = strs[0]
+
+        for str in strs[1:]:
+            while prefix != str[:len(prefix)]:
+                prefix = prefix[:-1]
+                if not prefix:
+                    return ''
+        return prefix
+
 
 # print(Solution.longest_common_prefix(['flower', 'flow', 'flight']))
-# print(Solution.longest_common_prefix(["dog", "racecar", "car"]))
-print(Solution.longest_common_prefix(["cir", "car"]))
-print('-------')
+print(Solution.longest_common_prefix_horizontal(['flower', 'flow', 'flight']))
+# print(Solution.longest_common_prefix_horizontal(["dog", "racecar", "car"]))
+# print(Solution.longest_common_prefix(["cir", "car"]))
 # print(Solution.longest_common_prefix([""]))
 # print(Solution.longest_common_prefix(["aa", 'aa']))
 # print(Solution.longest_common_prefix(["a"]))
+# print(Solution.longest_common_prefix(["ab", "a"]))
 # print(Solution.longest_common_prefix(["",""]))
