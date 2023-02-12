@@ -38,4 +38,4 @@ Output: 12
 
 ### Constraints:
 
-0 <= num <= 106
+- 0 <= num <= 10<sup>6</sup>
