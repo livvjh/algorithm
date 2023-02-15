@@ -24,33 +24,18 @@ q_node.right = p_r_node
 
 class Solution:
     def is_same_tree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        p_visited = []
-        p_visited_val = []
-        q_visited = []
-        q_visited_val = []
-        if not p and not q:
-            return True
-
-        queue = deque([p])
+        max_queue_size = 0
+        queue = deque([(p, q)])
         while queue:
-            n = queue.popleft()
-            if n not in p_visited:
-                p_visited.append(n)
-                p_visited_val.append(n.val if n is not None else None)
-                queue.append(p.left)
-                queue.append(p.right)
-
-        print(p_visited_val)
-        queue = deque([q])
-        while queue:
-            n = queue.popleft()
-            if n not in q_visited:
-                q_visited.append(n)
-                q_visited_val.append(n.val if n is not None else None)
-                queue.append(q.left)
-                queue.append(q.right)
-        print(q_visited_val)
-        return p_visited_val == q_visited_val
+            max_queue_size = max(max_queue_size, len(queue))
+            p, q = queue.popleft()
+            if not p and not q:
+                continue
+            elif (not p or not q) or (p.val != q.val):
+                return False
+            queue.extend([(p.left, q.left), (p.right, q.right)])
+        print(max_queue_size)
+        return True
 
 
 print(Solution().is_same_tree(p_node, q_node))
