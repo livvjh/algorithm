@@ -17,7 +17,8 @@ class Solution:
     def climb_stairs_2(n: int) -> int:
         steps_dict = {1: 1, 2: 2}
         for i in range(3, n + 1):
-            steps_dict[i] = steps_dict[i-1] + steps_dict[i - 2] # 누적 값을 통해 계산
+            steps_dict[i] = steps_dict[i - 1] + steps_dict[i - 2]  # 누적 값을 통해 계산
         return steps_dict[n]
 
-print(Solution.climb_stairs_2(4))
+
+print(Solution.climb_stairs(4))
