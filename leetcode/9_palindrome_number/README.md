@@ -1,4 +1,4 @@
-## 70. Climbing Stairs 
+## 9. Palindrome Number 
 > math
 
 <br>
