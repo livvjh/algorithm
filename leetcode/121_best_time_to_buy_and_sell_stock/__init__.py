@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def max_profit(self, prices: List[int]) -> int:
-        min_price = float('inf') # 무한 값
+        min_price = float('inf')  # 무한 값
         max_profit = 0
         for i in range(len(prices)):
             if prices[i] < min_price:
