@@ -10,6 +10,7 @@ memo = [-1] * (n + 1)
 memo[0], memo[1] = 0, 1
 print(fib(n, memo))
 
+
 # 풀어서 사용 (iter 구현)
 def fib_iter(n: int) -> int:
     memo = [-1] * (n + 1)
@@ -18,4 +19,14 @@ def fib_iter(n: int) -> int:
         memo[i] = memo[i - 1] + memo[i - 2]
     return memo[n]
 
+
 print(fib_iter(4))
+
+
+def factorial(num: int) -> int:
+    if num == 1:
+        return 1  # 기저 조건
+    return num * factorial(num - 1)
+
+
+print(factorial(3))  # 3 * 2 * 1
