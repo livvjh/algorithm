@@ -1,5 +1,9 @@
 # brute force
 
+"""
+
+"""
+
 def knapsack_brute_force(values: list[int], weights: list[int], capa: int, curr_index: int) -> int:
     if capa <= 0 or curr_index >= len(values):
         return 0
